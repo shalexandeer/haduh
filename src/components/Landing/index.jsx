@@ -10,7 +10,7 @@ import { TextGenerateEffect } from "../LandingFirstText/text-generate-effect";
 
 export default function Home() {
   const textGreetings =
-    "Happy 19th Birthday Vanessa! Wishing you the best of your life. All I know is that I know nothing bout you. Oh I forgot, yes your beautiful name is all I've got.";
+    "It's your special day, and Happy 19th birthday Vanessa!. All I know is that I know nothing bout you. Oh I forgot, yes your beautiful name is all I've got.";
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);

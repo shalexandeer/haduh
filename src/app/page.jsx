@@ -11,6 +11,9 @@ import Contact from "../components/Contact";
 import ZoomParallax from "@/components/ZoomParallax";
 import StickyCursor from "@/components/StickyCursor/StickyCursor";
 import ValleySong from "../../public/audio/boysandgirlsvalley.mp3";
+import HowItAllStarted from "@/components/HowItAllStarted/HowItAllStarted";
+import { InThatClass } from "@/components/InThatClass/InThatClass";
+import { HowITellMyFriends } from "@/components/HowITellMyFriends/HowITellMyFriends";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -43,6 +46,9 @@ export default function Home() {
           <Landing />
           <Description />
           <ZoomParallax />
+          <InThatClass />
+          <HowITellMyFriends />
+          <HowItAllStarted />
           <Projects />
           <SlidingImages />
           <Contact />
