@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/all";
 import { slideUp } from "./animation";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "../LandingFirstText/text-generate-effect";
+import { Spotify } from "react-spotify-embed";
 
 export default function Home() {
   const textGreetings =
@@ -77,6 +78,9 @@ export default function Home() {
         <div className='max-w-[500px]'>
           <TextGenerateEffect words={textGreetings} />
         </div>
+      </div>
+      <div className='absolute top-1/4 left-1/4 '>
+        <Spotify link='https://open.spotify.com/track/604kHji9ue7gWmomcPTnuk?si=cd680f4663ee45eb' />
       </div>
     </motion.main>
   );

@@ -5,14 +5,17 @@ import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
-const phrase = "It all started in that class";
+const phrase =
+  "Just in case no one has told you this today, I'm so proud of you and everything you have endured and achieved. I hope you know how worthy you are and how much you bring to the world.";
 
 export default function HowItAllStarted() {
   let refs = useRef([]);
   const container = useRef(null);
+  const body = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+
     createAnimation();
   }, []);
 
@@ -20,12 +23,18 @@ export default function HowItAllStarted() {
     gsap.to(refs.current, {
       scrollTrigger: {
         trigger: container.current,
+
         scrub: true,
-        start: "top",
+
+        start: `top`,
+
         end: `+=${window.innerHeight / 1.5}`,
       },
+
       opacity: 1,
+
       ease: "none",
+
       stagger: 0.1,
     });
   };
@@ -60,7 +69,7 @@ export default function HowItAllStarted() {
       ref={container}
       className={styles.main}>
       <div
-        // ref={body}
+        ref={body}
         className={styles.body}>
         {splitWords(phrase)}
       </div>

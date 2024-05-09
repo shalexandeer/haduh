@@ -14,6 +14,9 @@ import ValleySong from "../../public/audio/boysandgirlsvalley.mp3";
 import HowItAllStarted from "@/components/HowItAllStarted/HowItAllStarted";
 import { InThatClass } from "@/components/InThatClass/InThatClass";
 import { HowITellMyFriends } from "@/components/HowITellMyFriends/HowITellMyFriends";
+import { Spotify } from "react-spotify-embed";
+import { TryToGuess } from "@/components/TryToGuess/TryToGuess";
+import ImProudOfYou from "@/components/ImProudOfYou/ImProudOfYou";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,20 +24,22 @@ export default function Home() {
   function playAudio() {
     new Audio(ValleySong).play();
   }
-
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       const locomotiveScroll = new LocomotiveScroll();
+
+      const audio = new Audio(ValleySong);
+      audio.load(); // Preload the audio
 
       setTimeout(() => {
         playAudio();
         setIsLoading(false);
         document.body.style.cursor = "default";
         window.scrollTo(0, 0);
-      }, 3000);
+      }, 1000); // Delay for 1 second (adjust as needed)
     })();
-  }, []);
+  }, [playAudio]);
 
   return (
     <main className={styles.main}>
@@ -45,13 +50,15 @@ export default function Home() {
         <>
           <Landing />
           <Description />
+          <TryToGuess />
+          <ImProudOfYou />
+          {/* <HowItAllStarted /> */}
           <ZoomParallax />
           <InThatClass />
           <HowITellMyFriends />
-          <HowItAllStarted />
-          <Projects />
+          {/* <Projects />
           <SlidingImages />
-          <Contact />
+          <Contact /> */}
         </>
       )}
 
