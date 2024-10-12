@@ -64,7 +64,7 @@ export default function ZoomParallax() {
         className='w-full text-center text-4xl'
         variants={slideUp}
         animate={isInView ? "open" : "closed"}>
-        <h1>Ready to deep dive onto you?</h1>
+        <h1>This is what I wanted to say</h1>
         <h1>Scroll down!</h1>
       </motion.div>
       <div className={styles.sticky}>

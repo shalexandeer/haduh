@@ -19,7 +19,7 @@ export default function Index() {
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 1000 : 1000
+      index == 0 ? 500 : 500
     );
   }, [index]);
 

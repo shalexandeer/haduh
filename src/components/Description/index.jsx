@@ -67,8 +67,7 @@ export default function index() {
           className='absolute text-center'
           variants={variants}
           animate={buttonClicked ? "open" : "closed"}>
-          Recognize me first wkwk. I`ll give you the first hint. <br />
-          hint 1: We are in the same class
+          You`re the gift, and I`m the gift-giver. Happy 19th Birthday, Vanessa
         </motion.p>
       </div>
     </>
