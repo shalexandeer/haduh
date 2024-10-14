@@ -67,7 +67,7 @@ export default function index() {
           className='absolute text-center'
           variants={variants}
           animate={buttonClicked ? "open" : "closed"}>
-          You`re the gift, and I`m the gift-giver. Happy 19th Birthday, Vanessa
+          You`re the gift, and I`m the gift-giver. Happy 19th Birthday, Vanesa
         </motion.p>
       </div>
     </>
